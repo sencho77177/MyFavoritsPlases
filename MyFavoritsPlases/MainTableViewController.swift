@@ -34,8 +34,13 @@ class MainTableViewController: UITableViewController {
         cell?.imageView?.image = UIImage(named: reustorantNames[indexPath.row])
           return cell!
       }
-  
-
+    
+    // MARK - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
