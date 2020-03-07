@@ -32,6 +32,8 @@ class MainTableViewController: UITableViewController {
           let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         cell?.textLabel?.text = reustorantNames[indexPath.row]
         cell?.imageView?.image = UIImage(named: reustorantNames[indexPath.row])
+        cell?.imageView?.layer.cornerRadius = (cell?.frame.size.height ?? 85) / 2
+        cell?.imageView?.clipsToBounds = true
           return cell!
       }
     
